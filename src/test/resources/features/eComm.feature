@@ -1,7 +1,7 @@
 Feature: E Commerce Demo
 
 
-	@Regression
+	@SuccessFlow
     Scenario: Login with valid credentials
         Given User is on Login page
         When User enters username "standard_user" and password "secret_sauce"
@@ -16,7 +16,7 @@ Feature: E Commerce Demo
         |12345|
         Then User completes the purchase and sees the order confirmation message
   
-  	@Regression      
+  	@InvalidCred
      Scenario: Login with Invalid credentials
         Given User is on Login page
         When User enters username "standard_user" and password "password_1234"

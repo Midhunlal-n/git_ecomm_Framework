@@ -8,9 +8,9 @@ public class hooks {
 	public WebDriver driver; // Declare WebDriver at class level
 
 	public hooks(testSetup setup) {
-		this.driver = testSetup.driver; // Initialize WebDriver from testSetup
+		this.driver = setup.driver; // Initialize WebDriver from testSetup
 	}
-
+	
 	@After
 	public void tearDown() {
 		if (driver != null) {

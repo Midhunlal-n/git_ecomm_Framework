@@ -1,3 +1,4 @@
+
 package stepDefinitions_ecomm;
 
 import org.openqa.selenium.WebDriver;
@@ -11,7 +12,7 @@ public class StepDefs_LoginPage_ecomm {
 	public WebDriver driver;// Declare WebDriver at class level
 
 	public StepDefs_LoginPage_ecomm(testSetup setup) {
-		this.driver = testSetup.driver; // Initialize WebDriver from testSetup
+		this.driver = setup.driver; // Initialize WebDriver from testSetup
 		loginpage = new loginPage(driver); // send driver to page object
 
 	}
@@ -36,7 +37,7 @@ public class StepDefs_LoginPage_ecomm {
 
 	@Then("Error message will be displayed")
 	public void Error_message_will_be_displayed() {
-		if (loginpage.isInvalidLoginButtonDisplayed()==true) {
+		if (loginpage.isInvalidLoginButtonDisplayed() == true) {
 			System.out.println("Login Failed - Username and Password does not match");
 		} else
 			assert false;

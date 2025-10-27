@@ -13,7 +13,7 @@ public class StepDefs_checkoutPage_ecomm {
 	public WebDriver driver; // Declare WebDriver at class level
 
 	public StepDefs_checkoutPage_ecomm(testSetup setup) {
-		this.driver = testSetup.driver; // Initialize WebDriver from testSetup
+		this.driver = setup.driver; // Initialize WebDriver from testSetup
 		checkoutpage = new checkoutPage(driver); // send driver to page object
 	}
 

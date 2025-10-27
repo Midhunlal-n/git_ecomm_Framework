@@ -9,7 +9,7 @@ public class StepDefs_inventory_and_cartPage_ecomm {
 	public WebDriver driver; // Declare WebDriver at class level
 
 	public StepDefs_inventory_and_cartPage_ecomm(testSetup setup) {
-		this.driver = testSetup.driver; // Initialize WebDriver from testSetup
+		this.driver = setup.driver; // Initialize WebDriver from testSetup
 		inventorycartpage = new inventory_and_CartPage(driver); // send driver to page object
 	}
 
